@@ -1,3 +1,21 @@
+#Simple Notes on How to Use This App
+
+## Installation
+
+```bash
+npm install
+```
+
+## Running Dev Server
+
+```bash
+npm run dev
+```
+
+
+
+
+
 # React Redux Universal Hot Example
 
 [![build status](https://img.shields.io/travis/erikras/react-redux-universal-hot-example/master.svg?style=flat-square)](https://travis-ci.org/erikras/react-redux-universal-hot-example)

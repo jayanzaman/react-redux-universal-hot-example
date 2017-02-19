@@ -1,50 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { CounterButton, GithubButton } from 'components';
+import { CounterButton } from 'components';
 import config from '../../config';
 import Helmet from 'react-helmet';
+//  Helmet allows us to write the html head information in a neat way
 
 export default class Home extends Component {
   render() {
     const styles = require('./Home.scss');
-    // require the logo image both from client and server
-    const logoImage = require('./logo.png');
     return (
       <div className={styles.home}>
         <Helmet title="Home"/>
         <div className={styles.masthead}>
           <div className="container">
-            <div className={styles.logo}>
-              <p>
-                <img src={logoImage}/>
-              </p>
-            </div>
+
             <h1>{config.app.title}</h1>
 
             <h2>{config.app.description}</h2>
 
-            <p>
-              <a className={styles.github} href="https://github.com/erikras/react-redux-universal-hot-example"
-                 target="_blank">
-                <i className="fa fa-github"/> View on Github
-              </a>
-            </p>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="star"
-                          width={160}
-                          height={30}
-                          count large/>
-            <GithubButton user="erikras"
-                          repo="react-redux-universal-hot-example"
-                          type="fork"
-                          width={160}
-                          height={30}
-                          count large/>
-
-            <p className={styles.humility}>
-              Created and maintained by <a href="https://twitter.com/erikras" target="_blank">@erikras</a>.
-            </p>
           </div>
         </div>
 
@@ -55,7 +28,7 @@ export default class Home extends Component {
             <CounterButton multireducerKey="counter3"/>
           </div>
 
-          <p>This starter boilerplate app uses the following technologies:</p>
+          <p>This playground app uses the following technologies:</p>
 
           <ul>
             <li>
@@ -83,13 +56,13 @@ export default class Home extends Component {
               your router state in your Redux store
             </li>
             <li><a href="http://eslint.org" target="_blank">ESLint</a> to maintain a consistent code style</li>
-            <li><a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to manage form state
+            <li><a href="https://github.com/jayanzaman/redux-form" target="_blank">redux-form</a> to manage form state
               in Redux
             </li>
             <li><a href="https://github.com/sslotsky/violet-paginator" target="_blank">violet-paginator</a> to manage list state
               in Redux, including pagination, sorting, filtering, updating, and more.
             </li>
-            <li><a href="https://github.com/erikras/multireducer" target="_blank">multireducer</a> combine several
+            <li><a href="https://github.com/jayanzaman/multireducer" target="_blank">multireducer</a> combine several
               identical reducer states into one key-based reducer</li>
             <li><a href="https://github.com/webpack/style-loader" target="_blank">style-loader</a> and <a
               href="https://github.com/jtangelder/sass-loader" target="_blank">sass-loader</a> to allow import of
@@ -147,7 +120,7 @@ export default class Home extends Component {
             <dt>Forms</dt>
             <dd>
               The <Link to="/survey">Survey page</Link> uses the
-              still-experimental <a href="https://github.com/erikras/redux-form" target="_blank">redux-form</a> to
+              still-experimental <a href="https://github.com/jayanzaman/redux-form" target="_blank">redux-form</a> to
               manage form state inside the Redux store. This includes immediate client-side validation.
             </dd>
             <dt>Pagination</dt>

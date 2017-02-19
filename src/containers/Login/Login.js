@@ -26,7 +26,7 @@ export default class Login extends Component {
     return (
       <div className={styles.loginPage + ' container'}>
         <Helmet title="Login"/>
-        <h1>Login</h1>
+        <h1>Login Babe</h1>
         {!user &&
         <div>
           <form className="login-form form-inline" onSubmit={this.handleSubmit}>
