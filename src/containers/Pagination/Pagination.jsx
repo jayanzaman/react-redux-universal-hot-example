@@ -3,7 +3,8 @@ import Helmet from 'react-helmet';
 import { List } from 'immutable';
 import { connect } from 'react-redux';
 import { VioletDataTable, VioletPaginator } from 'violet-paginator';
-
+//  VioletPaginator is a react-redux package allowing users to manage arbitrarily many filtered, paginated lists of records. https://github.com/sslotsky/violet-paginator
+//  https://www.npmjs.com/package/violet-paginator
 import './violet.min.scss';
 import './Pagination.scss';
 
@@ -77,18 +78,14 @@ export function Pagination({ fetch }) {
   const config = {
     fetch,
     listId: 'recipes',
-    pageSize: 3
+    pageSize: 4
   };
 
   return (
-    <section style={{ width: '50%' }}>
+    <section style={{ width: '60%' }}>
       <h1>Pagination</h1>
       <Helmet title="Pagination" />
 
-      <p>
-        This is an example of a datatable in redux with sorting and pagination capability
-        provided by <a href="https://www.npmjs.com/package/violet-paginator" target="_blank">violet-paginator</a>.
-      </p>
       <VioletPaginator {...config} />
       <VioletDataTable
         {...config}

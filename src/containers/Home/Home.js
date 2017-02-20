@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { CounterButton } from 'components';
 import config from '../../config';
+//  I believe config might allow us to use the same information in mutiple places
 import Helmet from 'react-helmet';
 //  Helmet allows us to write the html head information in a neat way
 
