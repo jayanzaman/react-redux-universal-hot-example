@@ -23,11 +23,12 @@ export default class Html extends Component {
     const {assets, component, store} = this.props;
     const content = component ? ReactDOM.renderToString(component) : '';
     const head = Helmet.rewind();
+    //  rewind has to be calaled to avoid memory leak
 
     return (
       <html lang="en-us">
         <head>
-          {head.base.toComponent()}
+          {head.base. ()}
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {head.link.toComponent()}

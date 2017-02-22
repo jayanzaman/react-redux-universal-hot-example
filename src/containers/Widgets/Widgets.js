@@ -8,7 +8,7 @@ import { WidgetForm } from 'components';
 import { asyncConnect } from 'redux-async-connect';
 
 @asyncConnect([{
-  deferred: true,
+  // deferred: true,
   promise: ({store: {dispatch, getState}}) => {
     if (!isLoaded(getState())) {
       return dispatch(loadWidgets());

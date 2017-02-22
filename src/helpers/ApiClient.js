@@ -5,6 +5,7 @@ const methods = ['get', 'post', 'put', 'patch', 'del'];
 
 function formatUrl(path) {
   const adjustedPath = path[0] !== '/' ? '/' + path : path;
+  //  if the address doesn't start with '/' then put in '/'
   if (__SERVER__) {
     // Prepend host and port of the API server to the path.
     return 'http://' + config.apiHost + ':' + config.apiPort + adjustedPath;
@@ -22,6 +23,17 @@ export default class ApiClient {
         if (params) {
           request.query(params);
         }
+/*    The .query() method accepts objects, which when used with the GET method will form a query-string. The following will produce the path /search?query=Manny&range=1..5&order=desc.
+
+     request
+       .get('/search')
+       .query({ query: 'Manny' })
+       .query({ range: '1..5' })
+       .query({ order: 'desc' })
+       .end(function(err, res){
+
+       });
+   */
 
         if (__SERVER__ && req.get('cookie')) {
           request.set('cookie', req.get('cookie'));
