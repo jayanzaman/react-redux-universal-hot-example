@@ -45,6 +45,7 @@ export default class App extends Component {
     store: PropTypes.object.isRequired
   };
 
+//  componentWillReceiveProps() is invoked before a mounted component receives new props. If you need to update the state in response to prop changes (for example, to reset it), you may compare this.props and nextProps and perform state transitions using this.setState() in this method.
   componentWillReceiveProps(nextProps) {
     if (!this.props.user && nextProps.user) {
       // login
@@ -55,6 +56,7 @@ export default class App extends Component {
     }
   }
 
+//  handleLogout calls the logout function via redux props.
   handleLogout = (event) => {
     event.preventDefault();
     this.props.logout();
